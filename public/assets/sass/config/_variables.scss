@@ -8,12 +8,12 @@ $input-font-size: 1.2rem !default;
 $button-font-size: 1.4rem !default;
 
 // Skin / Color
-$primary-color: #08C !default;
-$primary-color-dark: #222529 !default;
-$secondary-color: #ff7272 !default;
-$secondary-color-dark: #2f3946 !default;
-$secondary-color-light: #515151 !default;
-$tertiary-color: #2baab1 !default;
+$primary-color: #3bb80e !default;
+$primary-color-dark: #114001 !default;
+$secondary-color: #e5e5e5 !default;
+$secondary-color-dark: #999999 !default;
+$secondary-color-light: #f5f5f5 !default;
+$tertiary-color: #980e0e !default;
 $link-color: $primary-color !default;
 
 $body-text: #777 !default;
@@ -24,13 +24,13 @@ $headings-text: #222529 !default;
 $border-radius: 0 !default;
 
 // Skin / Font Family
-$font-family: 'Open Sans', sans-serif !default;
-$second-font-family: Poppins, sans-serif !default;
+$font-family: Poppins, sans-serif !default;
+$second-font-family: 'Open Sans', sans-serif !default;
 $third-font-family: Oswald, sans-serif !default;
 
 // Skin / Shop Page Font Family
-$shop-font-family: 'Open Sans', sans-serif !default;
-$shop-second-font-family: Poppins, sans-serif !default;
+$shop-font-family: Poppins, sans-serif !default;
+$shop-second-font-family: 'Open Sans', sans-serif !default;
 
 // Breakpoints
 $breakpoints: (xs: 480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1600px, xlst: 1920px);

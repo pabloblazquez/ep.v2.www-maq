@@ -1,114 +1,120 @@
-<footer class="footer bg-dark">
-    <div class="footer-middle">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4 class="widget-title">Información y contacto</h4>
-                        <ul class="contact-info">
-                            <li>
-                                <span class="contact-info-label">Local comercial y recogida:</span>
-                                Paseo de Ubarburu 81 Pabellones 6-7, 20115 Astigarraga, Gipuzkoa.<br />
-                                Horario: Lun-Vie 9:00-13:30 y 15:30-18:00
-                            </li>
-                            <li>
-                                <span class="contact-info-label">Soporte telefónico:</span>
-                                <a href="tel:+34943442806">943 442 806</a><br />
-                                Horario: Lun-Vie 10:00-14:00
-                            </li>
-                            <li>
-                                <span class="contact-info-label">Soporte por email:</span>
-                                <a href="mailto:info@electroprecio.com">info@electroprecio.com</a>
-                            </li>
-                            <li>
-                                <span class="contact-info-label">Soporte por chat:</span>
-                                <a href="mailto:info@electroprecio.com">ONLINE</a><br />
-                                Horario: Lun-Vie 9:30-16:00
-                            </li>
-                        </ul>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon social-facebook icon-facebook" target="_blank" title="Facebook"></a>
-                            <a href="#" class="social-icon social-twitter icon-twitter" target="_blank" title="Twitter"></a>
-                            <a href="#" class="social-icon social-instagram icon-instagram" target="_blank" title="Instagram"></a>
+<?php
+global $page_bottom_scripts;
+?>
+    <footer class="footer bg-dark">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget">
+                            <h4 class="widget-title">Información y contacto</h4>
+                            <ul class="contact-info">
+                                <li>
+                                    <span class="contact-info-label"><i class="icon-phone"></i> Soporte telefónico:</span>
+                                    <a href="tel:+34943442806" class="font-weight-bold">943 442 806 <i class="fa fa-check-circle text-success" data-toggle="tooltip" data-html="true" title="<b>Servicio activo</b><br />Horario de lunes a viernes<br />De 10:00 a 14:00"></i></a><br />
+                                    <u>Horario:</u><br />
+                                    Lun-Vie 10:00-14:00
+                                </li>
+                                <li>
+                                    <span class="contact-info-label"><i class="icon-chat"></i> Soporte por chat:</span>
+                                    <a href="#" class="font-weight-bold" data-toggle="tooltip" data-html="true" title="<b>Servicio no activo</b><br />Horario de lunes a viernes<br />De 9:30 a 16:00">OFFLINE <i class="fa fa-times-circle text-danger"></i></a><br />
+                                    <u>Horario:</u><br />
+                                    Lun-Vie 9:30-16:00
+                                </li>
+                                <li>
+                                    <span class="contact-info-label"><i class="icon-envolope"></i> Soporte por email:</span>
+                                    <a href="mailto:info@electroprecio.com" class="font-weight-bold">info@electroprecio.com <i class="fa fa-check-circle text-success"></i></a>
+                                </li>
+                                <li>
+                                    <span class="contact-info-label"><i class="icon-home"></i> Local comercial y recogida:</span>
+                                    <a href="#" class="font-weight-bold">Paseo de Ubarburu 81 Pabellones 6-7, 20115 Astigarraga, Gipuzkoa. <i class="fa fa-check-circle text-success" data-toggle="tooltip" data-html="true" title="<b>Local comercial abierto</b><br />Horario de lunes a viernes<br />De 9:00 a 13:30 y de 15:30 a 18:00"></i></a><br />
+                                    <u>Horario:</u><br />
+                                    Lun-Vie 9:00-13:30 y 15:30-18:00
+                                </li>
+                            </ul>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon social-facebook icon-facebook" target="_blank" title="Facebook"></a>
+                                <a href="#" class="social-icon social-twitter icon-twitter" target="_blank" title="Twitter"></a>
+                                <a href="#" class="social-icon social-instagram icon-instagram" target="_blank" title="Instagram"></a>
+                            </div>
+                            <!-- End .social-icons -->
                         </div>
-                        <!-- End .social-icons -->
+                        <!-- End .widget -->
                     </div>
-                    <!-- End .widget -->
-                </div>
-                <!-- End .col-lg-3 -->
+                    <!-- End .col-lg-3 -->
 
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4 class="widget-title">Información</h4>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget">
+                            <h4 class="widget-title">Información</h4>
 
-                        <ul class="links">
-                            <li><a href="#">Preguntas frecuentes</a></li>
-                            <li><a href="#">Cómo hacer un pedido</a></li>
-                            <li><a href="#">Formas de pago</a></li>
-                            <li><a href="#">Devoluciones</a></li>
-                            <li><a href="#">Garantías</a></li>
-                            <li><a href="#">Servicios de instalación</a></li>
-                            <li><a href="#">Condiciones de compra</a></li>
-                            <li><a href="#">Aviso legal</a></li>
-                            <li><a href="#">Política de cookies</a></li>
-                            <li><a href="#">Privacidad</a></li>
-                        </ul>
+                            <ul class="links">
+                                <li><a href="#">Preguntas frecuentes</a></li>
+                                <li><a href="#">Cómo hacer un pedido</a></li>
+                                <li><a href="#">Formas de pago</a></li>
+                                <li><a href="#">Devoluciones</a></li>
+                                <li><a href="#">Garantías</a></li>
+                                <li><a href="#">Servicios de instalación</a></li>
+                                <li><a href="#">Condiciones de compra</a></li>
+                                <li><a href="#">Aviso legal</a></li>
+                                <li><a href="#">Política de cookies</a></li>
+                                <li><a href="#">Privacidad</a></li>
+                            </ul>
+                        </div>
+                        <!-- End .widget -->
                     </div>
-                    <!-- End .widget -->
-                </div>
-                <!-- End .col-lg-3 -->
+                    <!-- End .col-lg-3 -->
 
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4 class="widget-title">Sobre Electroprecio</h4>
-                        <p>Tu tienda de electrodomésticos online. Televisión, Led, Plasma, Smartphone, Frigoríficos, Lavadoras, Lavavajillas, Aspiradores, Afeitadoras, Home cinema, Fotografía, Gps, Ordenadores portátiles y todos sus accesorios al mejor precio.</p>
-                        <p>Electroprecio.com S.L. es una Sociedad Limitada (NIF: B20854071) legalmente constituida e inscrita en el Registro Mercantil de Guipúzcoa en el tomo 2121, Folio 177 y Hoja SS- 24475.</p>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget-newsletter">
+                            <h4 class="widget-title">Sobre Electroprecio</h4>
+                            <p>Tu tienda de electrodomésticos online. Televisión, Led, Plasma, Smartphone, Frigoríficos, Lavadoras, Lavavajillas, Aspiradores, Afeitadoras, Home cinema, Fotografía, Gps, Ordenadores portátiles y todos sus accesorios al mejor precio.</p>
+                            <p>Electroprecio.com S.L. es una Sociedad Limitada (NIF: B20854071) legalmente constituida e inscrita en el Registro Mercantil de Guipúzcoa en el tomo 2121, Folio 177 y Hoja SS- 24475.</p>
+                        </div>
+                        <!-- End .widget -->
                     </div>
-                    <!-- End .widget -->
-                </div>
-                <!-- End .col-lg-3 -->
+                    <!-- End .col-lg-3 -->
 
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget widget-newsletter">
-                        <h4 class="widget-title">Suscríbete a nuestro boletín</h4>
-                        <p>Mantente informado de las lo último en electroprecio.Novedades, promociones y acceso a ventas exclusivas.</p>
-                        <form action="#" class="mb-0">
-                            <input type="email" class="form-control m-b-3" placeholder="Dirección de correo" required>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget-newsletter">
+                            <h4 class="widget-title">Suscríbete a nuestro boletín</h4>
+                            <p>Mantente informado de las lo último en electroprecio. Novedades, promociones y acceso a ventas exclusivas.</p>
+                            <form action="#" class="mb-0">
+                                <input type="email" class="form-control m-b-3" placeholder="Dirección de correo" required>
 
-                            <input type="submit" class="btn btn-primary shadow-none" value="Suscribirme">
-                        </form>
+                                <input type="submit" class="btn btn-primary shadow-none" value="Suscribirme">
+                            </form>
+                        </div>
+                        <!-- End .widget -->
                     </div>
-                    <!-- End .widget -->
+                    <!-- End .col-lg-3 -->
                 </div>
-                <!-- End .col-lg-3 -->
+                <!-- End .row -->
             </div>
-            <!-- End .row -->
+            <!-- End .container -->
+        </div>
+        <!-- End .footer-middle -->
+
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="container d-sm-flex align-items-center">
+                    <div class="footer-left">
+                        <span class="footer-copyright">2023 © Electroprecio, S.L.</span>
+                    </div>
+
+                    <div class="footer-right ml-auto mt-1 mt-sm-0">
+                        <div class="payment-icons">
+                            <span class="payment-icon visa" style="background-image: url(assets/images/payments/payment-visa.svg)"></span>
+                            <span class="payment-icon paypal" style="background-image: url(assets/images/payments/payment-paypal.svg)"></span>
+                            <span class="payment-icon verisign" style="background-image:  url(assets/images/payments/payment-verisign.svg)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End .footer-bottom -->
         </div>
         <!-- End .container -->
-    </div>
-    <!-- End .footer-middle -->
-
-    <div class="container">
-        <div class="footer-bottom">
-            <div class="container d-sm-flex align-items-center">
-                <div class="footer-left">
-                    <span class="footer-copyright">2023 © Electroprecio, S.L.</span>
-                </div>
-
-                <div class="footer-right ml-auto mt-1 mt-sm-0">
-                    <div class="payment-icons">
-                        <span class="payment-icon visa" style="background-image: url(assets/images/payments/payment-visa.svg)"></span>
-                        <span class="payment-icon paypal" style="background-image: url(assets/images/payments/payment-paypal.svg)"></span>
-                        <span class="payment-icon verisign" style="background-image:  url(assets/images/payments/payment-verisign.svg)"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End .footer-bottom -->
-    </div>
-    <!-- End .container -->
-</footer>
-<!-- End .footer -->
+    </footer>
+    <!-- End .footer -->
 </div>
 <!-- End .page-wrapper -->
 
@@ -343,6 +349,7 @@
 <script src="assets/js/optional/isotope.pkgd.min.js"></script>
 <script src="assets/js/plugins.min.js"></script>
 <script src="assets/js/jquery.appear.min.js"></script>
+<?php echo $page_bottom_scripts; ?>
 
 <!-- Main JS File -->
 <script src="assets/js/main.min.js"></script>

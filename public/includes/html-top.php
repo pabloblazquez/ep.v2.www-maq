@@ -1,3 +1,12 @@
+<?php
+global $title;
+global $meta_keywords;
+global $meta_description;
+
+global $page_top_stylesheet;
+global $page_top_scripts;
+global $page_bottom_scripts;
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,6 +46,9 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/demo4.min.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
+
+    <?php echo $page_top_stylesheet; ?>
+    <?php echo $page_top_scripts; ?>
 </head>
 
 <body>
@@ -55,25 +67,26 @@
     <header class="header">
         <div class="header-top">
             <div class="container">
-                <div class="header-left d-none d-sm-block">
-                    <div class="header-contact d-none d-lg-flex pl-4 pr-4 float-left">
-                        <i class="icon-phone"></i>
-                        <h6><span>Teléfono (10:00 - 14:00)</span><a href="tel:943 442 806" class="text-dark font1">943 442 806</a></h6>
+                <div class="header-left header-dropdowns mr-0 mr-sm-auto">
+
+                    <div class="header-dropdown dropdown-expanded d-none d-sm-block">
+                        <a href="#">Contacto</a>
+                        <div class="header-menu">
+                            <ul class="font-weight-bold">
+                                <li><a href="tel:943 442 806"><i class="icon-phone text-dark"></i> 943 442 806 <i class="fa fa-check-circle text-success" data-toggle="tooltip" data-html="true" title="<b>Servicio activo</b><br />Horario de lunes a viernes<br />De 10:00 a 14:00"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-html="true" title="<b>Servicio no activo</b><br />Horario de lunes a viernes<br />De 9:30 a 16:00"><i class="icon-chat text-dark"></i> Chat Offline <i class="fa fa-times-circle text-danger"></i></a></li>
+                                <li><a href="mailto:info@electroprecio.com"><i class="icon-envolope text-dark"></i> info@electroprecio.com <i class="fa fa-check-circle text-success"></i></a></li>
+                                <li><a href="#"><i class="icon-home text-dark"></i> Ubicación <i class="fa fa-check-circle text-success" data-toggle="tooltip" data-html="true" title="<b>Local comercial abierto</b><br />Horario de lunes a viernes<br />De 9:00 a 13:30 y de 15:30 a 18:00"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- End .header-menu -->
                     </div>
-                    <div class="header-contact d-none d-lg-flex pl-4 pr-4 float-left">
-                        <i class="icon-chat"></i>
-                        <h6><span>Chat (9.30 - 16.00)</span><a href="tel:#" class="text-dark font1">ONLINE</a></h6>
-                    </div>
-                    <div class="header-contact d-none d-lg-flex pl-4 pr-4 float-left">
-                        <i class="icon-home"></i>
-                        <h6><span>Local (9.00 - 13.30 / 15.30 - 18:00)</span><a href="tel:#" class="text-dark font1">UBICACIÓN</a></h6>
-                    </div>
+                    <!-- End .header-dropown -->
                 </div>
-                <!-- End .header-left -->
 
-                <div class="header-right header-dropdowns ml-0 ml-sm-auto w-sm-100">
+                <div class="header-right header-dropdowns ml-0 ml-sm-auto">
 
-                    <div class="header-dropdown dropdown-expanded d-none d-lg-block">
+                    <div class="header-dropdown dropdown-expanded d-none d-sm-block">
                         <a href="#">Links</a>
                         <div class="header-menu">
                             <ul>
@@ -89,7 +102,7 @@
 
                     <span class="separator"></span>
 
-                    <div class="social-icons">
+                    <div class="social-icons d-sm-block">
                         <a href="#" class="social-icon social-facebook icon-facebook" target="_blank"></a>
                         <a href="#" class="social-icon social-twitter icon-twitter" target="_blank"></a>
                         <a href="#" class="social-icon social-instagram icon-instagram" target="_blank"></a>
@@ -145,10 +158,10 @@
                     </div>
                     <!-- End .header-search -->
 
-                    <div class="owl-carousel owl-theme" style="width: 300px;" data-owl-options="{
+                    <div class="owl-carousel owl-theme" style="width: 30rem;" data-owl-options="{
 						'loop': true,
 						'autoplay': true,
-						'autoplayTimeout': 3000,
+						'autoplayTimeout': 4000,
 						'autoplayHoverPause': true,
 						'autoWidth': true,
 						'lazyLoad':true,
@@ -156,14 +169,38 @@
 						'nav': false,
 						'items': 1
 					}">
-                        <div class="header-contact d-none d-lg-flex pl-4 pr-4">
-                            <h6><span class="text-secondary">Valoración en GOOGLE</span><a href="https://customerreviews.google.com/v/merchant?q=electroprecio.com&c=ES&v=19&hl=es" class="text-warning font1 custom-font-size-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></a></h6>
+                        <div class="" style="width: 30rem;">
+                            <h5 class="text-body mb-0 text-center">Valoración en <span class="text-white bg-danger">&nbsp;GOOGLE&nbsp;</span></h5>
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
                         </div>
-                        <div class="header-contact d-none d-lg-flex pl-4 pr-4">
-                            <h6><span class="text-primary">Valoración en IDEALO</span><a href="https://www.idealo.es/tienda/317555/electroprecio-com.html" class="text-warning font1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></a></h6>
+                        <div class="" style="width: 30rem;">
+                            <h5 class="text-body mb-0 text-center">Valoración en <span class="text-white bg-info">&nbsp;IDEALO&nbsp;</span></h5>
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:90%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
                         </div>
-                        <div class="header-contact d-none d-lg-flex pl-4 pr-4">
-                            <h6><span class="text-info">Valoración en TRUSTPILOT</span><a href="https://es.trustpilot.com/review/www.electroprecio.com" class="text-warning font1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></a></h6>
+                        <div class="" style="width: 30rem;">
+                            <h5 class="text-body mb-0 text-center">Valoración en <span class="text-white bg-success">&nbsp;TRUSTPILOT&nbsp;</span></h5>
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:80%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
                         </div>
                     </div>
 
@@ -238,25 +275,20 @@
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
@@ -292,25 +324,20 @@
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
@@ -346,25 +373,20 @@
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
@@ -400,25 +422,20 @@
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
@@ -454,25 +471,20 @@
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
@@ -500,33 +512,28 @@
                             </div>
                             <!-- End .megamenu -->
                         </li>
-                        <li class="float-right">
-                            <a href="category.php" rel="noopener" class="pl-5" target="_blank">Ofertas TOP</a>
+                        <li class="float-right pl-3">
+                            <a href="category.php">Ofertas TOP</a>
                             <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
@@ -554,33 +561,28 @@
                             </div>
                             <!-- End .megamenu -->
                         </li>
-                        <li class="float-right">
-                            <a href="category.php" class="pl-5">Especial Cecotec</a>
+                        <li class="float-right pl-3">
+                            <a href="category.php">Promociones especiales</a>
                             <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 1</a>
                                         <ul class="submenu">
                                             <li><a href="category.html">Fullwidth Banner</a></li>
-                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a>
-                                            </li>
-                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a>
-                                            </li>
+                                            <li><a href="category-banner-boxed-slider.html">Boxed Slider Banner</a></li>
+                                            <li><a href="category-banner-boxed-image.html">Boxed Image Banner</a></li>
                                             <li><a href="category.html">Left Sidebar</a></li>
                                             <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                             <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a>
-                                            </li>
-                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a>
-                                            </li>
+                                            <li><a href="category-horizontal-filter1.html">Horizontal Filter1</a></li>
+                                            <li><a href="category-horizontal-filter2.html">Horizontal Filter2</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
                                         <a href="#" class="nolink">VARIATION 2</a>
                                         <ul class="submenu">
                                             <li><a href="category-list.html">List Types</a></li>
-                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                            </li>
+                                            <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a></li>
                                             <li><a href="category.html">3 Columns Products</a></li>
                                             <li><a href="category-4col.html">4 Columns Products</a></li>
                                             <li><a href="category-5col.html">5 Columns Products</a></li>
