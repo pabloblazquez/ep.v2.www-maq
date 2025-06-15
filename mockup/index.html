@@ -4,68 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electroprecio - Maqueta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="top-bar">
         <div class="container">
-            <span>Atención al cliente: 900 000 000</span>
-            <span>info@electroprecio.com</span>
+            <span>Tienda física: De lunes a viernes, de 9:00 a 13:30 y de 15:30 a 19:00</span>
+            <a href="https://goo.gl/maps/dJ2oEGC9cN4yDpko9" target="_blank">Ubicación</a>
         </div>
     </div>
     <header>
         <div class="container header-wrap">
-            <div class="logo">Electroprecio</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#categorias">Categorías</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+            <a href="#" class="logo"><img src="https://www.electroprecio.com/skin/frontend/rwd/electroprecio/images/logo.svg" alt="Electroprecio"></a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#">TV, Audio, Imagen</a></li>
+                    <li><a href="#">Electrodomésticos</a></li>
+                    <li><a href="#">Pequeño Electrodoméstico</a></li>
+                    <li><a href="#">Telefonía</a></li>
+                    <li><a href="#">Informática</a></li>
+                    <li><a href="#">Ocio y Deporte</a></li>
+                    <li class="special"><a href="#">Ofertas Top</a></li>
                 </ul>
             </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-            </div>
             <div class="actions">
+                <form class="search" onsubmit="return false;">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                </form>
                 <a href="#" class="account">Mi cuenta</a>
-                <a href="#" class="cart">Carrito (0)</a>
+                <a href="#" class="cart">Cesta</a>
             </div>
         </div>
     </header>
-
     <section class="hero">
-        <div class="slides">
-            <div class="slide active" style="background-image:url('https://via.placeholder.com/1600x450?text=Promoci%C3%B3n+1');"></div>
-            <div class="slide" style="background-image:url('https://via.placeholder.com/1600x450?text=Promoci%C3%B3n+2');"></div>
-            <div class="slide" style="background-image:url('https://via.placeholder.com/1600x450?text=Promoci%C3%B3n+3');"></div>
-        </div>
+        <div class="slide active" style="background-image:url('https://www.electroprecio.com/media/campaigns/home-slider/bsh_instalacion_desktop.png');"></div>
+        <div class="slide" style="background-image:url('https://www.electroprecio.com/media/campaigns/home-slider/ofertas_top_genericas_desktop.png');"></div>
     </section>
-
-    <main class="container">
-        <section id="categorias" class="categories">
+    <main>
+        <section class="categories container">
             <h2>Categorías populares</h2>
             <div class="cat-grid">
-                <a href="#" class="cat">Televisores</a>
-                <a href="#" class="cat">Informática</a>
-                <a href="#" class="cat">Móviles</a>
-                <a href="#" class="cat">Audio</a>
-                <a href="#" class="cat">Electrodomésticos</a>
+                <a href="#">Televisores</a>
+                <a href="#">Smartphones</a>
+                <a href="#">Electrodomésticos</a>
+                <a href="#">Informática</a>
+                <a href="#">Audio</a>
             </div>
         </section>
-
-        <section id="destacados" class="products">
+        <section class="products container">
             <h2>Productos destacados</h2>
-            <div class="grid" id="product-grid"></div>
+            <div id="product-grid" class="grid"></div>
         </section>
     </main>
-
     <footer>
         <div class="container">
-            <p>&copy; 2025 Electroprecio. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Electroprecio.com - Maqueta de ejemplo.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

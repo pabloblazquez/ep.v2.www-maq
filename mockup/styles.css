@@ -4,8 +4,14 @@
     padding: 0;
 }
 
+:root {
+    --verde-oscuro: #006b3f;
+    --rojo: #d31129;
+    --gris: #f5f5f5;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -17,7 +23,7 @@ body {
 }
 
 .top-bar {
-    background: #f5f5f5;
+    background: var(--gris);
     font-size: 0.9em;
     padding: 5px 0;
 }
@@ -25,55 +31,71 @@ body {
 .top-bar .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header {
-    background: #005eb8;
+    background: var(--verde-oscuro);
     color: #fff;
-    padding: 10px 0;
 }
 
 .header-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 0;
 }
 
-header .logo {
-    font-size: 1.6em;
-    font-weight: bold;
+.logo img {
+    height: 40px;
 }
 
-.main-nav ul {
+.main-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
-.main-nav a {
+.main-menu a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.search-bar input {
-    padding: 5px 10px;
-    border: none;
+.main-menu .special a {
+    background: var(--rojo);
+    padding: 4px 8px;
     border-radius: 3px;
 }
 
-.actions a {
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search input {
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    background: var(--verde-oscuro);
     color: #fff;
-    margin-left: 15px;
-    text-decoration: none;
+    border: none;
+    padding: 5px 8px;
+    margin-left: 4px;
+    cursor: pointer;
 }
 
 .hero {
     position: relative;
-    height: 450px;
+    height: 400px;
     overflow: hidden;
 }
 
-.hero .slide {
+.slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -82,10 +104,10 @@ header .logo {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s;
 }
 
-.hero .slide.active {
+.slide.active {
     opacity: 1;
 }
 
@@ -93,13 +115,13 @@ header .logo {
     margin: 40px 0;
 }
 
-.categories .cat-grid {
+.cat-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.categories .cat {
+.cat-grid a {
     flex: 1 1 150px;
     background: #eee;
     padding: 15px;
@@ -120,7 +142,7 @@ header .logo {
 }
 
 .product-card {
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
     border-radius: 4px;
@@ -132,12 +154,12 @@ header .logo {
 }
 
 .product-card .price {
-    font-weight: bold;
-    color: #005eb8;
+    color: var(--verde-oscuro);
+    font-weight: 600;
 }
 
 footer {
-    background: #f5f5f5;
-    padding: 20px 0;
+    background: var(--gris);
     text-align: center;
+    padding: 20px 0;
 }

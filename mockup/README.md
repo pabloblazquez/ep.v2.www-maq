@@ -1,16 +1,12 @@
-# Maqueta Electroprecio
+# Nueva Maqueta de Electroprecio
 
-Este directorio contiene una maqueta sin conexión que imita la estructura de la
-web de Electroprecio. Se trata de un diseño genérico inspirado en tiendas de
-electrónica, ya que no fue posible consultar el sitio real desde el entorno de
-desarrollo.
+Esta carpeta contiene una maqueta estática inspirada en el diseño actual de Electroprecio. Incluye un encabezado con menú de navegación, un slider principal y secciones de categorías y productos.
 
-## Características
+La maqueta no tiene conexión con bases de datos ni funcionalidades reales; sirve únicamente como ejemplo de estructura y estilo.
 
-- **HTML** con cabecera, menú de categorías, banner principal y rejilla de
-  productos.
-- **CSS** para un aspecto limpio basado en tonos azules y grises.
-- **JavaScript** que activa un carrusel automático y genera tarjetas de
-  productos de ejemplo.
+## Archivos
+- `index.html` – estructura de la página
+- `styles.css` – estilos básicos basados en los colores corporativos
+- `script.js` – rotación de banners y generación de productos de muestra
 
-Abre `index.html` en tu navegador para ver la maqueta.
+Abre `index.html` en un navegador para visualizar la maqueta.

@@ -2,28 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
     let current = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-        });
+    function showSlide(i) {
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
     }
 
-    function nextSlide() {
+    function next() {
         current = (current + 1) % slides.length;
         showSlide(current);
     }
 
-    setInterval(nextSlide, 4000);
+    setInterval(next, 5000);
 
     const products = [
-        { name: 'Televisor 50" 4K', price: '399€', img: 'https://via.placeholder.com/200' },
-        { name: 'Portátil gaming', price: '999€', img: 'https://via.placeholder.com/200' },
-        { name: 'Auriculares Bluetooth', price: '59€', img: 'https://via.placeholder.com/200' },
-        { name: 'Smartphone 5G', price: '699€', img: 'https://via.placeholder.com/200' },
-        { name: 'Barra de sonido', price: '199€', img: 'https://via.placeholder.com/200' },
-        { name: 'Frigorífico combi', price: '549€', img: 'https://via.placeholder.com/200' },
-        { name: 'Robot aspirador', price: '249€', img: 'https://via.placeholder.com/200' },
-        { name: 'Monitor 27"', price: '229€', img: 'https://via.placeholder.com/200' }
+        { name: 'OLED LG 42"', price: '779€', img: 'https://www.electroprecio.com/media/catalog/product/cache/1/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/o/l/oled42c44la.png' },
+        { name: 'Aspirador Ariete', price: '54€', img: 'https://www.electroprecio.com/media/catalog/product/cache/1/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/2/7/2761.jpg' },
+        { name: 'Smartwatch', price: '179€', img: 'https://via.placeholder.com/200' },
+        { name: 'Portátil Gaming', price: '999€', img: 'https://via.placeholder.com/200' }
     ];
 
     const grid = document.getElementById('product-grid');
@@ -35,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${p.img}" alt="${p.name}">
             <h3>${p.name}</h3>
             <p class="price">${p.price}</p>
-            <button>Añadir al carrito</button>
+            <button>Añadir</button>
         `;
         grid.appendChild(card);
     });
