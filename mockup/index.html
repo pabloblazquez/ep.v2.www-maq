@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="top-bar">
         <div class="container">
+            <span>Atención al cliente: 900 000 000</span>
+            <span>info@electroprecio.com</span>
+        </div>
+    </div>
+    <header>
+        <div class="container header-wrap">
             <div class="logo">Electroprecio</div>
             <nav class="main-nav">
                 <ul>
@@ -30,18 +36,27 @@
 
     <section class="hero">
         <div class="slides">
-            <div class="slide active" style="background-image: url('https://via.placeholder.com/1200x400?text=Promoci%C3%B3n+1');"></div>
-            <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400?text=Promoci%C3%B3n+2');"></div>
-            <div class="slide" style="background-image: url('https://via.placeholder.com/1200x400?text=Promoci%C3%B3n+3');"></div>
+            <div class="slide active" style="background-image:url('https://via.placeholder.com/1600x450?text=Promoci%C3%B3n+1');"></div>
+            <div class="slide" style="background-image:url('https://via.placeholder.com/1600x450?text=Promoci%C3%B3n+2');"></div>
+            <div class="slide" style="background-image:url('https://via.placeholder.com/1600x450?text=Promoci%C3%B3n+3');"></div>
         </div>
     </section>
 
     <main class="container">
-        <section id="destacados" class="products">
-            <h2>Productos Destacados</h2>
-            <div class="grid" id="product-grid">
-                <!-- Productos generados con JS -->
+        <section id="categorias" class="categories">
+            <h2>Categorías populares</h2>
+            <div class="cat-grid">
+                <a href="#" class="cat">Televisores</a>
+                <a href="#" class="cat">Informática</a>
+                <a href="#" class="cat">Móviles</a>
+                <a href="#" class="cat">Audio</a>
+                <a href="#" class="cat">Electrodomésticos</a>
             </div>
+        </section>
+
+        <section id="destacados" class="products">
+            <h2>Productos destacados</h2>
+            <div class="grid" id="product-grid"></div>
         </section>
     </main>
 

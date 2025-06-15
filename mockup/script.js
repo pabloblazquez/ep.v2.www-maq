@@ -16,10 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(nextSlide, 4000);
 
     const products = [
-        { name: 'Televisor 50"', price: '399€', img: 'https://via.placeholder.com/200' },
-        { name: 'Portátil Gaming', price: '999€', img: 'https://via.placeholder.com/200' },
+        { name: 'Televisor 50" 4K', price: '399€', img: 'https://via.placeholder.com/200' },
+        { name: 'Portátil gaming', price: '999€', img: 'https://via.placeholder.com/200' },
         { name: 'Auriculares Bluetooth', price: '59€', img: 'https://via.placeholder.com/200' },
-        { name: 'Smartphone 5G', price: '699€', img: 'https://via.placeholder.com/200' }
+        { name: 'Smartphone 5G', price: '699€', img: 'https://via.placeholder.com/200' },
+        { name: 'Barra de sonido', price: '199€', img: 'https://via.placeholder.com/200' },
+        { name: 'Frigorífico combi', price: '549€', img: 'https://via.placeholder.com/200' },
+        { name: 'Robot aspirador', price: '249€', img: 'https://via.placeholder.com/200' },
+        { name: 'Monitor 27"', price: '229€', img: 'https://via.placeholder.com/200' }
     ];
 
     const grid = document.getElementById('product-grid');
