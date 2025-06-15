@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electroprecio - Maqueta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <span>Tienda física: De lunes a viernes, de 9:00 a 13:30 y de 15:30 a 19:00</span>
+            <a href="https://goo.gl/maps/dJ2oEGC9cN4yDpko9" target="_blank">Ubicación</a>
+        </div>
+    </div>
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo"><img src="https://www.electroprecio.com/skin/frontend/rwd/electroprecio/images/logo.svg" alt="Electroprecio"></a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="#">TV, Audio, Imagen</a></li>
+                    <li><a href="#">Electrodomésticos</a></li>
+                    <li><a href="#">Pequeño Electrodoméstico</a></li>
+                    <li><a href="#">Telefonía</a></li>
+                    <li><a href="#">Informática</a></li>
+                    <li><a href="#">Ocio y Deporte</a></li>
+                    <li class="special"><a href="#">Ofertas Top</a></li>
+                </ul>
+            </nav>
+            <div class="actions">
+                <form class="search" onsubmit="return false;">
+                    <input type="text" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                </form>
+                <a href="#" class="account">Mi cuenta</a>
+                <a href="#" class="cart">Cesta</a>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="slide active" style="background-image:url('https://www.electroprecio.com/media/campaigns/home-slider/bsh_instalacion_desktop.png');">
+            <a href="#" class="link" title="BSH instalación"></a>
+        </div>
+        <div class="slide" style="background-image:url('https://www.electroprecio.com/media/campaigns/home-slider/ofertas_top_genericas_desktop.png');">
+            <a href="#" class="link" title="Ofertas top"></a>
+        </div>
+    </section>
+    <main>
+        <section class="banners container">
+            <div class="banner-item">
+                <img src="https://www.electroprecio.com/media/catalog/product/cache/1/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/o/l/oled42c44la.png" alt="LG OLED">
+                <div class="detail">
+                    <h3>OLED LG 42"</h3>
+                    <span class="price">779€</span>
+                </div>
+            </div>
+            <div class="banner-item">
+                <img src="https://www.electroprecio.com/media/catalog/product/cache/1/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/2/7/2761.jpg" alt="Ariete">
+                <div class="detail">
+                    <h3>Aspirador Ariete</h3>
+                    <span class="price">54€</span>
+                </div>
+            </div>
+        </section>
+        <section class="categories container">
+            <h2>Categorías populares</h2>
+            <div class="cat-grid">
+                <a href="#">Televisores</a>
+                <a href="#">Smartphones</a>
+                <a href="#">Electrodomésticos</a>
+                <a href="#">Informática</a>
+                <a href="#">Audio</a>
+            </div>
+        </section>
+        <section class="products container">
+            <h2>Productos destacados</h2>
+            <div id="product-grid" class="grid"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Electroprecio.com - Maqueta de ejemplo.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
